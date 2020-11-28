@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import pdf from './resume.pdf';
 
 function App() {
   return (
@@ -11,10 +12,12 @@ function App() {
               <p className="text-right px-3 py-2 display-4 text-white font-weight-normal border-right border-3 border-white">Max Pinheiro <br/> Developer, Designer</p>
             </div>
             <div className="col-4">
-              <Link to="/resume">
+              <a href={pdf}>
                 <p className="text-left mt-4 pt-2 h3 font-weight-light text-white">Resume</p>
+              </a>
+              <Link to="/projects">
+                <p className="text-left mt-3  h3 font-weight-light text-white">Project Archive</p>
               </Link>
-              <p className="text-left mt-3  h3 font-weight-light text-white">Project Archive</p>
             </div>
           </div>
         </div>
