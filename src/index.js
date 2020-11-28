@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Document} from 'react-pdf';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
@@ -8,14 +7,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/theme.css';
 import './index.css';
 import App from "./App";
+import ProjectContainer from "./ProjectContainer";
 
 ReactDOM.render(
   <React.StrictMode>
       <Router>
-      <Switch>
-          <Route exact path="/" component={App}/>
-          <Route path="/resume" component={<Document />}/>
-      </Switch>
+          <div className="container-fluid min-vw-100 vh-100 bg-sea-green">
+              <Switch>
+                  <Route exact path="/" component={App}/>
+                  <Route exact path="/projects" component={ProjectContainer}/>
+              </Switch>
+          </div>
   </Router>
   </React.StrictMode>,
   document.getElementById('root')
