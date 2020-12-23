@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Max Pinheiro ~ Web Developer</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="theme.css">
+    </head>
+    <body>
+        <div>
+            <div class="containter-fluid vh-100 row align-items-center bg-sea-green">
+                <canvas id="background" style="position:absolute; width: 100%; height: 100%;"></canvas>
+                <div class="mx-auto" style="position:relative;">
+                    <p class="text-center text-main my-n2">max pinheiro</p>
+                    <p class="text-center text-header">web developer</p>
+                </div>
+            </div>
+            <div class="container-fluid vh-100 bg-dark-gray">
+                <div class="container py-5">
+                    <span class="row">
+                        <div class="col col-md-4">
+                            <img src="profile.png" alt="profile" class="img-fluid rounded-circle border border-white shadow-lg" style="width: 250px;"/>
+                        </div>
+                        <div class="col col-md-8">
+                          <p class="text-center text-header">about me</p>
+                          <div class="border-top my-3 w-50 mx-auto"></div>
+                          <p class="lead text-white">Hi, I'm Max! I'm a web developer, and I'm currently studying Computer Science at Northeastern University.</p>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="container-fluid bg-dark-violet">
+                <div class="py-2">
+                    <p class="text-center text-header">skills</p>
+                    <div class="border-top w-25 mx-auto"></div>
+                    <div class="row my-3">
+                        <div class="col">
+                            <p class="text-center text-white"> </p>
+                        </div>
+                        <div class="col">
+                            <p class="text-center text-white"> </p>
+                        </div>
+                        <div class="col">
+                            <p class="text-center text-white"> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-steel-blue">
+                <div class="py-2">
+                    <p class="text-center text-header">projects</p>
+                    <div class="border-top w-25 mx-auto"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const cnv = document.getElementById('background');
+            const ctx = cnv.getContext('2d');
+            let pos = {x: 0, y: 0};
+            let vel = {x: 1.5, y: 1};
+
+            function update() {    
+                ctx.fillStyle = '#1D8A53';
+                ctx.fillRect(0, 0, cnv.width, cnv.height);
+
+                ctx.fillStyle = 'black';
+                ctx.beginPath();
+                ctx.ellipse(pos.x, pos.y, 25, 25, 0, 0, 2 * Math.PI);
+                ctx.fill();
+
+                pos = {x: pos.x + 1 * vel.x, y: pos.y + 1 * vel.y};
+                vel = {x: vel.x * (pos.x >= cnv.width || pos.x <= 0 ? -1 : 1), y: vel.y * (pos.y >= cnv.height || pos.y <= 0 ? -1 : 1)};
+
+                window.requestAnimationFrame(update);
+            }
+            //window.requestAnimationFrame(update);
+        </script>
+    </body>
+</html>

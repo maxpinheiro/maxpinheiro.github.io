@@ -1,0 +1,76 @@
+:root {
+    --lightblue: #75B8C8;
+    --steelblue: #4e6996;
+    --seagreen: #44AF69;
+    --lightgray: #636564;
+    --darkgray: #343A40;
+    --darkviolet: #7F6289;
+}
+
+.bg-light-blue {
+    background-color: var(--lightblue);
+}
+
+.text-light-blue {
+    color: var(--lightblue);
+}
+
+.bg-steel-blue {
+    background-color: var(--steelblue);
+}
+
+.text-steel-blue {
+    color: var(--steelblue);
+}
+
+.bg-sea-green {
+    background-color: var(--seagreen);
+}
+
+.text-sea-green {
+    color: var(--seagreen);
+}
+
+.bg-light-gray {
+    background-color: var(--lightgray);
+}
+
+.text-light-gray {
+    color: var(--lightgray);
+}
+
+.bg-dark-gray {
+    background-color: var(--darkgray);
+}
+
+.text-dark-gray {
+    color: var(--darkgray);
+}
+
+.bg-dark-violet {
+    background-color: var(--darkviolet);
+}
+
+.text-dark-violet {
+    color: var(--darkviolet);
+}
+
+.border-3 {
+    border-width:6px;
+}
+
+.text-main {
+    font-family: Arial;
+    font-weight: bolder;
+    font-size: 100px;
+    color: white;
+    text-shadow: 3px 3px 4px black;
+}
+
+.text-header {
+    font-family: Arial;
+    font-weight: medium;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
