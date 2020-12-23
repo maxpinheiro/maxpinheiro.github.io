@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,12 +12,10 @@ import ProjectContainer from "./ProjectContainer";
 ReactDOM.render(
   <React.StrictMode>
       <Router>
-          <div className="container-fluid min-vw-100 vh-100 bg-sea-green">
-              <Switch>
-                  <Route exact path="/" component={App}/>
-                  <Route exact path="/projects" component={ProjectContainer}/>
-              </Switch>
-          </div>
+          <Switch>
+              <Route exact path="/" component={App}/>
+              <Route exact path="/projects" component={ProjectContainer}/>
+          </Switch>
   </Router>
   </React.StrictMode>,
   document.getElementById('root')

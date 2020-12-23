@@ -40,3 +40,12 @@
 .border-3 {
     border-width:6px;
 }
+
+.font-main {
+    font-family: Arial;
+    font-weight: bolder;
+    font-size: 100px;
+    color: white;
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+}
