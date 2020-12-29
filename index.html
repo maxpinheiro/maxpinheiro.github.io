@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Max Pinheiro ~ Web Developer</title>
+        <link rel="icon" href="./media/favicon.png"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <link rel="stylesheet" href="theme.css"/>
+    </head>
+    <body>
+        <div>
+            <div class="sticky-top navbar justify-content-between p-3" style="background-color: #343A40;" id="navbar">
+                <span>
+                    <img src="./media/m.png" alt="m" class="mb-1" style="width: 35px;"/>
+                    <a href="" class="text-title my-auto" style="text-decoration: none;">Max Pinheiro</a>
+                </span>
+                <div class="">
+                    <a href="#projects" class="text-heading mx-2 my-auto" style="text-decoration: none;">projects</a>
+                    <a href="https://github.com/maxpinheiro" class="text-heading mx-2 my-auto" style="text-decoration: none;">github</a>
+                    <a href="./media/resume.pdf" class="text-heading mx-2 my-auto" style="text-decoration: none;">resume</a>
+                    <a href="#contact" class="text-heading mx-2 my-auto" style="text-decoration: none;">contact</a>
+                </div>
+            </div>
+            <div class="containter-fluid vh-100 bg-sea-green">
+                <div style="height: 35%;"></div>
+                <div class="row align-items-center">
+                    <canvas id="background" style="position:absolute; width: 100%; height: 100%;"></canvas>
+                    <div class="mx-auto" style="position:relative;">
+                        <p class="text-center text-main my-n2">max pinheiro</p>
+                        <p class="text-center text-header">web developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid vh-100 bg-dark-gray">
+                <div class="container py-5">
+                    <span class="row">
+                        <div class="col col-md-4">
+                            <img src="./media/profile.png" alt="profile" class="img-fluid rounded-circle border border-white shadow-lg" style="width: 250px;"/>
+                        </div>
+                        <div class="col col-md-8">
+                          <p class="text-center text-header">about me</p>
+                          <div class="border-top my-3 w-50 mx-auto"></div>
+                          <p class="lead text-white">Hi, I'm Max! I'm a web developer, currently studying Computer Science at Northeastern University.</p>
+                        </div>
+                    </span>
+                    <p class="text-center text-medium">my skills</p>
+                    <div class="border-top my-3 w-25 mx-auto"></div>
+                    <div class="row my-4"> 
+                        <div class="col">
+                            <p class="text-center text-title bg-secondary">front-end dev</p>
+                            <p class="text-white"> HTML, CSS, JS, Typescript, React/Redux, Angular, JQuery, Ajax, Bootstrap</p>
+                        </div>
+                        <div class="col">
+                            <p class="text-center text-title bg-secondary">back-end dev</p>
+                            <p class="text-white">Node, Express, PHP, MongoDB/Mongoose, MySQL, JPA, Spring Boot</p>
+                        </div>
+                        <div class="col">
+                            <p class="text-center text-title bg-secondary">machine learning</p>
+                            <p class="text-white">Python, PyTorch, TensorFlow, Scikit-learn, Pandas, Numpy, R, ml.js</p>
+                        </div>
+                        <div class="col">
+                            <p class="text-center text-title bg-secondary">misc.</p>
+                            <p class="text-white">Java, Racket, LateX, Git, JetBrains IDE, VS Code, Eclipse, Photoshop, Illustrator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid vh-100 bg-steel-blue" id="projects">
+                <div style="height: 7%;"></div>
+                <div class="container py-2">
+                    <p class="text-center text-header">projects</p>
+                    <div class="border-top w-25 mx-auto"></div>
+
+                    <div id="project-list" class="row mt-4 text-center text-heading">
+                    </div>
+
+                    <div id="selected-project" class="row mt-4">
+                        <div class="container rounded bg-sea-green pb-4 mt-4 mx-4">
+                            <button class="float-left mt-3 btn text-white" onclick="closeProject()"><i class="fas fa-arrow-left"></i></button>
+                            <p class=" text-center mt-2 text-medium" id="project-title" style=""></p>
+                            <p class="text-heading my-3 mx-4" id="project-description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-steel-blue" id="contact">
+                <p onclick="scrollUp()" class="btn text-white float-left"><i class="fas fa-arrow-up"></i></p>
+                <div class="container py-2 bg-dark-gray" style="width: 65%">
+                    <p class="text-center text-header">contact</p>
+                    <div class="border-top w-25 mx-auto"></div>
+                    <div class="pt-4 pb-5 ml-2 row">
+                        <div class="col-4"></div>
+                        <div class="col-4">
+                            <a href="https://www.instagram.com/notmaxpinheiro/" class="text-white" style="text-decoration: none;">
+                                <span class="row mx-auto">
+                                    <div class="rounded-circle border border-white px-2 py-1">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                    <p class="my-auto ml-3 text-white d-inline">@notmaxpinheiro</p>
+                                </span>
+                            </a>
+                            <a href="http://github.com/maxpinheiro" class="text-white" style="text-decoration: none;">
+                                <span class="row mx-auto my-3">
+                                    <div class="rounded-circle border border-white px-2 py-1">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <p class="my-auto ml-3 text-white d-inline">@maxpinheiro</p>
+                                </span>
+                            </a>
+                            <a href="mailto: pinheiro.m@northeastern.edu" class="text-white" style="text-decoration: none;">
+                                <span class="row mx-auto my-3">
+                                    <div class="rounded-circle border border-white px-2 py-1">
+                                        <i class="far fa-at"></i>
+                                    </div>
+                                    <p class="my-auto ml-3 text-white d-inline">pinheiro.m@northeastern.edu</p>
+                                </span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mpin" class="text-white" style="text-decoration: none;">
+                                <span class="row mx-auto mb-3">
+                                    <div class="rounded-circle border border-white px-2 py-1">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                    <p class="my-auto ml-3 text-white d-inline">Max Pinheiro</p>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="media/projects.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
