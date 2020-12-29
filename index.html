@@ -33,7 +33,6 @@
                 </div>
             </div>
             <div class="container-fluid vh-100 bg-dark-gray">
-                <p onclick="scrollUp()" class="btn text-white float-left"><i class="fas fa-arrow-up"></i></p>
                 <div class="container py-5">
                     <span class="row">
                         <div class="col col-md-4">
@@ -45,41 +44,54 @@
                           <p class="lead text-white">Hi, I'm Max! I'm a web developer, currently studying Computer Science at Northeastern University.</p>
                         </div>
                     </span>
-                </div>
-            </div>
-            <div class="container-fluid vh-100 bg-dark-violet">
-                <p onclick="scrollUp()" class="btn text-white float-left"><i class="fas fa-arrow-up"></i></p>
-                <div class="container py-2">
-                    <p class="text-center text-header">skills</p>
-                    <div class="border-top w-25 mx-auto"></div>
-                    <div class="row my-3">
+                    <p class="text-center text-medium">my skills</p>
+                    <div class="border-top my-3 w-25 mx-auto"></div>
+                    <div class="row my-4"> 
                         <div class="col">
-                            <p class="text-center text-white"> </p>
+                            <p class="text-center text-title bg-secondary">front-end dev</p>
+                            <p class="text-white"> HTML, CSS, JS, Typescript, React/Redux, Angular, JQuery, Ajax, Bootstrap</p>
                         </div>
                         <div class="col">
-                            <p class="text-center text-white"> </p>
+                            <p class="text-center text-title bg-secondary">back-end dev</p>
+                            <p class="text-white">Node, Express, PHP, MongoDB/Mongoose, MySQL, JPA, Spring Boot</p>
                         </div>
                         <div class="col">
-                            <p class="text-center text-white"> </p>
+                            <p class="text-center text-title bg-secondary">machine learning</p>
+                            <p class="text-white">Python, PyTorch, TensorFlow, Scikit-learn, Pandas, Numpy, R, ml.js</p>
+                        </div>
+                        <div class="col">
+                            <p class="text-center text-title bg-secondary">misc.</p>
+                            <p class="text-white">Java, Racket, LateX, Git, JetBrains IDE, VS Code, Eclipse, Photoshop, Illustrator</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container-fluid vh-100 bg-steel-blue" id="projects">
-                <p onclick="scrollUp()" class="btn text-white float-left"><i class="fas fa-arrow-up"></i></p>
+                <div style="height: 7%;"></div>
                 <div class="container py-2">
                     <p class="text-center text-header">projects</p>
                     <div class="border-top w-25 mx-auto"></div>
+
+                    <div id="project-list" class="row mt-4 text-center text-heading">
+                    </div>
+
+                    <div id="selected-project" class="row mt-4">
+                        <div class="container rounded bg-sea-green pb-4 mt-4 mx-4">
+                            <button class="float-left mt-3 btn text-white" onclick="closeProject()"><i class="fas fa-arrow-left"></i></button>
+                            <p class=" text-center mt-2 text-medium" id="project-title" style=""></p>
+                            <p class="text-heading my-3 mx-4" id="project-description"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="container-fluid bg-dark-gray" id="contact">
+            <div class="container-fluid bg-steel-blue" id="contact">
                 <p onclick="scrollUp()" class="btn text-white float-left"><i class="fas fa-arrow-up"></i></p>
-                <div class="container py-2">
+                <div class="container py-2 bg-dark-gray" style="width: 65%">
                     <p class="text-center text-header">contact</p>
                     <div class="border-top w-25 mx-auto"></div>
-                    <div class="pt-4 pb-5 row">
+                    <div class="pt-4 pb-5 ml-2 row">
                         <div class="col-4"></div>
-                        <div class="col-4 ml-5">
+                        <div class="col-4">
                             <a href="https://www.instagram.com/notmaxpinheiro/" class="text-white" style="text-decoration: none;">
                                 <span class="row mx-auto">
                                     <div class="rounded-circle border border-white px-2 py-1">
@@ -118,6 +130,7 @@
                 </div>
             </div>
         </div>
+        <script src="media/projects.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

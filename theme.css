@@ -85,6 +85,14 @@
     text-shadow: 2px 2px 2px #4d4c4c;
 }
 
+.text-medium {
+    font-family: Arial;
+    font-weight: medium;
+    font-size: 35px;
+    color: white;
+    text-shadow: 2px 2px 2px #4d4c4c;
+}
+
 .text-title {
     font-family: Arial;
     font-weight: normal;
@@ -99,4 +107,33 @@
     font-size: 16px;
     color: white;
     text-shadow: 1px 1px 1px #4d4c4c;
+}
+
+.card-1 {
+    background-color: #15557D;
+    height: 100px;
+}
+
+.card-2 {
+    background-color: #0B9BD9;
+    height: 100px;
+}
+
+.card-3 {
+    background-color: #06A191;
+    height: 100px;
+}
+
+.card-4 {
+    background-color: #10B37C;
+    height: 100px;
+}
+
+.card-5 {
+    background-color: #237A63;
+    height: 100px;
+}
+
+.card-md {
+    height: 100px;
 }
