@@ -9,6 +9,11 @@
     --darktan: #9C8259;
 }
 
+a:hover {
+    text-decoration: none;
+    color: var(--darkviolet);
+}
+
 .bg-light-blue {
     background-color: var(--lightblue);
 }
@@ -65,9 +70,20 @@
     color: var(--tan);
 }
 
+
+.bg-secondary-50 {
+    background-color: rgba(108, 117, 125, 0.5);
+}
+
+
 .border-3 {
     border-width:6px;
 }
+
+
+
+
+
 
 .text-main {
     font-family: Arial;
