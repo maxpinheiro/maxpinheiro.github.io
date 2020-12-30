@@ -59,7 +59,7 @@ function setListeners() {
                 $('#project-list').hide();
                 // decorate selected project
                 $('#project-title').html($(`#card${i} p`).html());
-                $('#project-description').html(descriptions[i-1].description);
+                $('#project-description').html(`<p class="text-title">${descriptions[i-1].description}</p>`);
                 $('#selected-project div').css('background-color', $(`#card${i}`).css('background-color'));
                 
             }
