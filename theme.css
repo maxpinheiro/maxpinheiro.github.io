@@ -11,7 +11,7 @@
 
 a:hover {
     text-decoration: none;
-    color: var(--darkviolet);
+    color: rgb(179, 38, 195);
 }
 
 .bg-light-blue {
@@ -70,20 +70,13 @@ a:hover {
     color: var(--tan);
 }
 
-
 .bg-secondary-50 {
     background-color: rgba(108, 117, 125, 0.5);
 }
 
-
 .border-3 {
     border-width:6px;
 }
-
-
-
-
-
 
 .text-main {
     font-family: Arial;
@@ -125,6 +118,21 @@ a:hover {
     text-shadow: 1px 1px 1px #4d4c4c;
 }
 
+.text-card-title {
+    font-family: Arial;
+    font-weight: medium;
+    font-size: 30px;
+    color: white;
+}
+
+.text-card-body {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 12px;
+    color: white;
+    text-shadow: 0.5px 0.5px 0.5px #4d4c4c;
+}
+
 .card-1 {
     background-color: #15557D;
     height: 100px;
@@ -151,5 +159,9 @@ a:hover {
 }
 
 .card-md {
-    height: 100px;
+    height: 250px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

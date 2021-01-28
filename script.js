@@ -1,13 +1,20 @@
 const cnv = document.getElementById('background');
 const ctx = cnv.getContext('2d');
 let selectedProject = '';
+//let two = new Two({width: window.width, height: window.height}).appendTo(document.getElementById('background'));
+//console.log(two.appendTo);
 
 
 window.onload = () => {
     $('#selected-project').hide();
-    $('#project-list').html(descriptions.map((project, idx) => `<div class="col-12 col-sm-6 col-md-3"><div class="card card-md my-3" style="cursor: pointer;" id="card${idx+1}"><p class="my-auto card-title h4">${project.title}</p></div></div>`));
+    $('#project-list').html(descriptions.map((project, idx) =>
+        `<div class="col-12 col-sm-6 col-md-3">
+            <div class="card-md my-3" id="card${idx+1}">
+                <p class="text-card-title h4 m-3">${project.title}</p>
+            </div>
+        </div>`));
     setCards();
-    window.requestAnimationFrame(update);
+    //window.requestAnimationFrame(update);
 };
 
 function update() {    
@@ -45,48 +52,26 @@ document.addEventListener('scroll', (e) => {
     }
 })
 
-function setCards() {
-    setColorsTheme();
-    setListeners();
-}
+const setCards = () => {setColorsTheme(); setListeners();};
 
 function setListeners() {
-    for (let i = 1; i <= document.getElementsByClassName('card').length; i++) {
-        document.getElementById(`card${i}`).addEventListener('click', () => {
+    for (let i = 1; i <= document.getElementsByClassName('card-md').length; i++) {
+        document.getElementById(`card${i}`).addEventListener('mouseenter', () => {
             if (selectedProject === '') {
                 selectedProject = `card${i}`;
-                $('#selected-project').show();
-                $('#project-list').hide();
-                // decorate selected project
-                $('#project-title').html($(`#card${i} p`).html());
-                $('#project-description').html(`<p class="text-title">${descriptions[i-1].description}</p>`);
-                $('#selected-project div').css('background-color', $(`#card${i}`).css('background-color'));
-                
+                $(`#card${i}`).html(`<p class="text-card-body m-3">${descriptions[i-1].description}</p>`);
             }
-        })
-    }
-}
-
-function closeProject() {
-    selectedProject = '';
-    $('#selected-project').hide();
-    $('#project-list').show();
-}
-
-function setColors() {
-    const classes = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'];
-    const cards = document.getElementsByClassName('card');
-    for (let i = 0; i < cards.length; i++) {
-        let idx = Math.floor(Math.random() * classes.length);
-        let className = classes[idx];
-        cards[i].classList.remove(classes);
-        cards[i].classList.add(className);
+        });
+        document.getElementById(`card${i}`).addEventListener('mouseleave', () => {
+            selectedProject = '';
+            $(`#card${i}`).html(`<p class="text-card-title h4 m-3">${descriptions[i-1].title}</p>`);
+        });
     }
 }
 
 function setColorsTheme() {
     const colors = ['#15557D', '#0B9BD9', '#06A191', '#10B37C', '#237A63', '#065052', '#01754B', '#076BB3'];
-    const cards = document.getElementsByClassName('card');
+    const cards = document.getElementsByClassName('card-md');
     for (let i = 0; i < cards.length; i++) {
         let idx = Math.floor(Math.random() * colors.length);
         let color = colors[idx];
