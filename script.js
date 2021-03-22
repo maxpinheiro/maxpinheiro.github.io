@@ -8,7 +8,7 @@ let selectedProject = '';
 window.onload = () => {
     $('#selected-project').hide();
     $('#project-list').html(descriptions.map((project, idx) =>
-        `<div class="col-12 col-sm-6 col-md-3">
+        `<div class="col-12 col-sm-6 col-md-4">
             <div class="card-md my-3" id="card${idx+1}">
                 <p class="text-card-title h4 m-3">${project.title}</p>
             </div>
