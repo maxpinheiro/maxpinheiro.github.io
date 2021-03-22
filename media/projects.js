@@ -49,4 +49,8 @@ const descriptions = [{
 {
     "title": "snake",
     "description": "Just a simple Snake game built with HTML/JS for fun. I like making games when I'm bored"
+},
+{
+    "title": "dice data",
+    "description": "This is a collection of data visualizations as I roll 2 6-sided dice every day; check it out <a href='https://maxpinheiro.github.io/dice-data/' >here</a>, or the source code <a href='https://github.com/maxpinheiro/dice-data' >here</a>."
 }];
