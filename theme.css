@@ -7,6 +7,8 @@
     --darkviolet: #7F6289;
     --tan: #E8D2AE;
     --darktan: #9C8259;
+    --shadow: #4d4c4c;
+    --shadowlight: #636161;
 }
 
 a:hover {
@@ -90,7 +92,7 @@ a:hover {
     font-weight: bolder;
     font-size: 100px;
     color: white;
-    text-shadow: 3px 3px 4px #4d4c4c;
+    text-shadow: 3px 3px 4px var(--shadow);
 }
 
 .text-header {
@@ -98,7 +100,7 @@ a:hover {
     font-weight: medium;
     font-size: 50px;
     color: white;
-    text-shadow: 2px 2px 2px #4d4c4c;
+    text-shadow: 2px 2px 2px var(--shadow);
 }
 
 .text-medium {
@@ -106,7 +108,7 @@ a:hover {
     font-weight: medium;
     font-size: 35px;
     color: white;
-    text-shadow: 2px 2px 2px #4d4c4c;
+    text-shadow: 2px 2px 2px var(--shadow);
 }
 
 .text-title {
@@ -114,7 +116,7 @@ a:hover {
     font-weight: normal;
     font-size: 20px;
     color: white;
-    text-shadow: 1px 1px 1px #4d4c4c;
+    text-shadow: 1px 1px 1px var(--shadow);
 }
 
 .text-heading {
@@ -122,33 +124,73 @@ a:hover {
     font-weight: normal;
     font-size: 16px;
     color: white;
-    text-shadow: 1px 1px 1px #4d4c4c;
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+.card-bubble {
+    padding: 100px 15px;
+    border-radius: 20px;
+
+}
+
+.border-20 {
+    border-radius: 20px;
+}
+
+.p-50-20 {
+    padding: 50px 20px;
 }
 
 .card-1 {
     background-color: #15557D;
+    border: 2px solid transparent;
     height: 100px;
+}
+
+.card-1:hover {
+    border: 2px solid #3b7ea8;
 }
 
 .card-2 {
     background-color: #0B9BD9;
+    border: 2px solid transparent;
     height: 100px;
+}
+
+.card-2:hover {
+    border: 2px solid #195185;
 }
 
 .card-3 {
     background-color: #06A191;
+    border: 2px solid transparent;
     height: 100px;
+}
+
+.card-3:hover {
+    border: 3px solid #346655;
 }
 
 .card-4 {
     background-color: #10B37C;
+    border: 2px solid transparent;
     height: 100px;
+}
+
+.card-4:hover {
+    border: 3px solid #1d694f;
 }
 
 .card-5 {
     background-color: #237A63;
+    border: 2px solid transparent;
     height: 100px;
 }
+
+.card-5:hover {
+    border: 2px solid #295c4e;
+}
+
 
 .card-md {
     height: 100px;

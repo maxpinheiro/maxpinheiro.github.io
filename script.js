@@ -1,15 +1,18 @@
 const cnv = document.getElementById('background');
-const ctx = cnv.getContext('2d');
+const ctx = cnv ? cnv.getContext('2d') : null;
 let selectedProject = '';
+//let two = new Two({width: window.width, height: window.height}).appendTo(document.getElementById('background'));
+//console.log(two.appendTo);
 
 
 window.onload = () => {
     $('#selected-project').hide();
-    $('#project-list').html(descriptions.map((project, idx) => `<div class="col-12 col-sm-6 col-md-3"><div class="card card-md my-3" style="cursor: pointer;" id="card${idx+1}"><p class="my-auto card-title h4">${project.title}</p></div></div>`));
+    $('#project-list').html(descriptions.map((project, idx) => `<div class="col-sm-6 col-md-4"><div class="card-bubble card-md my-3 d-flex justify-content-center align-items-center" style="cursor: pointer;" id="card${idx+1}"><p class=" h3 mt-2">${project.title}</p></div></div>`));
     setCards();
-    window.requestAnimationFrame(update);
-};
 
+    //window.requestAnimationFrame(update);
+};
+/*
 function update() {    
     ctx.fillStyle = '#45AF69';
     ctx.fillRect(0, 0, cnv.width, cnv.height);
@@ -24,6 +27,7 @@ function update() {
 
     window.requestAnimationFrame(update);
 }
+*/
 
 const scrollUp = () => window.scrollTo({top: 0, behavior: 'smooth'});
 
@@ -45,14 +49,12 @@ document.addEventListener('scroll', (e) => {
     }
 })
 
-function setCards() {
-    setColorsTheme();
-    setListeners();
-}
+const setCards = () => {setColors(); setListeners();};
 
 function setListeners() {
-    for (let i = 1; i <= document.getElementsByClassName('card').length; i++) {
+    for (let i = 1; i <= document.getElementsByClassName('card-bubble').length; i++) {
         document.getElementById(`card${i}`).addEventListener('click', () => {
+        //$(`#card${i}`).hover(() => {
             if (selectedProject === '') {
                 selectedProject = `card${i}`;
                 $('#selected-project').show();
@@ -63,9 +65,12 @@ function setListeners() {
                 $('#selected-project div').css('background-color', $(`#card${i}`).css('background-color'));
                 
             }
-        })
+        }, () => {});
     }
 }
+
+//$('#selected-project').hover(() => {}, () => {closeProject();});
+
 
 function closeProject() {
     selectedProject = '';
@@ -75,7 +80,7 @@ function closeProject() {
 
 function setColors() {
     const classes = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'];
-    const cards = document.getElementsByClassName('card');
+    const cards = document.getElementsByClassName('card-bubble');
     for (let i = 0; i < cards.length; i++) {
         let idx = Math.floor(Math.random() * classes.length);
         let className = classes[idx];
@@ -86,7 +91,7 @@ function setColors() {
 
 function setColorsTheme() {
     const colors = ['#15557D', '#0B9BD9', '#06A191', '#10B37C', '#237A63', '#065052', '#01754B', '#076BB3'];
-    const cards = document.getElementsByClassName('card');
+    const cards = document.getElementsByClassName('card-bubble');
     for (let i = 0; i < cards.length; i++) {
         let idx = Math.floor(Math.random() * colors.length);
         let color = colors[idx];
