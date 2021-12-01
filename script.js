@@ -7,9 +7,13 @@ let selectedProject = '';
 
 window.onload = () => {
     $('#selected-project').hide();
-    $('#project-list').html(descriptions.map((project, idx) => `<div class="col-sm-6 col-md-4"><div class="card-bubble card-md my-3 d-flex justify-content-center align-items-center" style="cursor: pointer;" id="card${idx+1}"><p class=" h3 mt-2">${project.title}</p></div></div>`));
+    $('#project-list').html(descriptions.map((project, idx) => `
+    <div class="col-sm-6 col-md-4">
+        <div class="card-bubble card-md my-3 d-flex justify-content-center align-items-center" style="cursor: pointer;" id="card${idx+1}">
+            <p class="h3 mt-2">${project.title}</p>
+        </div>
+    </div>`));
     setCards();
-
     //window.requestAnimationFrame(update);
 };
 /*
@@ -57,13 +61,7 @@ function setListeners() {
         //$(`#card${i}`).hover(() => {
             if (selectedProject === '') {
                 selectedProject = `card${i}`;
-                $('#selected-project').show();
-                $('#project-list').hide();
-                // decorate selected project
-                $('#project-title').html($(`#card${i} p`).html());
-                $('#project-description').html(`<p class="text-title">${descriptions[i-1].description}</p>`);
-                $('#selected-project div').css('background-color', $(`#card${i}`).css('background-color'));
-                
+                $(`#card${i}`).html(`<p class="text-card-body m-3">${descriptions[i-1].description}</p>`);
             }
         }, () => {});
     }
