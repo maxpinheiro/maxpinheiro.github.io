@@ -11,7 +11,7 @@ const descriptions = [{
     "description": "As a competitive figure, it's helpful to be able to quickly predict your program score during practice. The current apps that do this all cost money, so I decided to build a web app so that people can do this for free. The app can easily calculate figure skating program scores with IJS scoring system. Check out the app <a href='https://maxpinheiro.github.io/fs-calculator/' >here</a>, or the source code <a href='https://github.com/maxpinheiro/fs-calculator' >here</a>."
 }, 
 {
-    "title": "spotify song recommendation",
+    "title": "spotify song recommender",
     "description": "This was my final project for my Artifical Intelligence course in the Fall 2020 semester. It's a neural embedding system for playlist generation. It uses Spotify's <a href='https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/' >Web API</a> to get a song's audio features (energy, tempo, danceability, etc.) and <a href='https://www.tensorflow.org/tutorials/generative/autoencoder' >Tensorflow</a> to find similar songs. Check out the project report <a href='./media/cs4100report.pdf' >here</a>, or the source code <a href='https://github.com/krisharma/spotify-recs' >here</a>."
 }, 
 {

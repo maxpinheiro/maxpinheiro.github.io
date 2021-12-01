@@ -16,6 +16,9 @@ a:hover {
     color: rgb(179, 38, 195);
 }
 
+/* COLORS */
+
+
 .bg-light-blue {
     background-color: var(--lightblue);
 }
@@ -80,6 +83,8 @@ a:hover {
     border-width:6px;
 }
 
+/* TYPOGRAPHY */
+
 .text-main {
     font-family: Arial;
     font-weight: bolder;
@@ -99,18 +104,57 @@ a:hover {
 .text-medium {
     font-family: Arial;
     font-weight: medium;
-    font-size: 35px;
+    font-size: 45px;
     color: white;
     text-shadow: 2px 2px 2px var(--shadow);
+}
+@media (min-width: 1000px) {
+    .text-medium {
+        font-family: Arial;
+        font-weight: medium;
+        font-size: 35px;
+        color: white;
+        text-shadow: 2px 2px 2px var(--shadow);
+    }
 }
 
 .text-title {
     font-family: Arial;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 40px;
     color: white;
     text-shadow: 1px 1px 1px var(--shadow);
 }
+
+@media (min-width: 1000px) {
+    .text-title {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 20px;
+        color: white;
+        text-shadow: 1px 1px 1px var(--shadow);
+    }
+}
+
+
+.text-body {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 35px;
+    color: white !important;
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+@media (min-width: 1000px) {
+    .text-body {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 20px;
+        color: white !important;
+        text-shadow: 1px 1px 1px var(--shadow);
+    }
+    
+  }
 
 .text-heading {
     font-family: Arial;
@@ -120,13 +164,27 @@ a:hover {
     text-shadow: 1px 1px 1px var(--shadow);
 }
 
+
 .text-description {
     font-family: Arial;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 35px;
+    line-height: 1.75 !important;
     color: white;
     text-shadow: 1px 1px 1px var(--shadow);
 }
+
+@media (min-width: 1000px) {
+    .text-description {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 20px;
+        color: white;
+        text-shadow: 1px 1px 1px var(--shadow);
+    }
+}
+
+/*  MISC  */
 
 .line-height-150 {
     line-height: 200%;

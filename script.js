@@ -8,9 +8,9 @@ let selectedProject = '';
 window.onload = () => {
     $('#selected-project').hide();
     $('#project-list').html(descriptions.map((project, idx) => `
-    <div class="col-sm-6 col-md-4">
+    <div class="col-md-6 col-lg-4">
         <div class="card-bubble card-md my-3 d-flex justify-content-center align-items-center" style="cursor: pointer;" id="card${idx+1}">
-            <p class="h3 mt-2">${project.title}</p>
+            <p class="h3 mt-2 text-medium">${project.title}</p>
         </div>
     </div>`));
     setCards();
@@ -63,6 +63,7 @@ function setListeners() {
                 selectedProject = `card${i}`;
                 $('#project-list').hide();
                 $('#selected-project').show();
+                $('#selected-project').css({backgroundColor: $(`#card${i}`).css( "background-color" )})
                 $('#project-description').html(descriptions[i-1].description);
             }
         }, () => {});

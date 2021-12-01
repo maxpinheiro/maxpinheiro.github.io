@@ -23,7 +23,7 @@
                     <a href="#contact" class="text-heading mx-2 my-auto" style="text-decoration: none;">contact</a>
                 </div>
             </div>
-            <div class="containter-fluid vh-100 bg-sea-green">
+            <div class="containter-fluid min-vh-100 bg-sea-green">
                 <img src="media/background.svg" style="position:absolute; width: 100%; height: 100%;" alt="background" />
                 <div class="d-flex flex-column align-items-center align-self-center my-auto">
                     <div class="mx-auto" style="position:absolute; top:40%">
@@ -32,51 +32,53 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid vh-100 bg-dark-gray">
+            <div class="container-fluid min-vh-100 bg-dark-gray">
+                <img src="media/aboutme_bg.svg" style="display: none; position:absolute; width: 100%; height: 100%;" alt="background" />
                 <div class="container py-5">
-                    <span class="row">
-                        <div class="col col-md-4">
-                            <img src="./media/profile.png" alt="profile" class="img-fluid rounded-circle border border-white shadow-lg" style="width: 250px;"/>
+                    <span class="row mb-3">
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <img src="./media/profile.png" alt="profile" class="img-fluid rounded-circle border border-white shadow-lg mt-4" style="width: 250px; height: 250px;"/>
                         </div>
-                        <div class="col col-md-8 mb-3">
+                        <div class="col-lg-8">
                           <p class="text-center text-header">about me</p>
                           <div class="border-top my-3 w-50 mx-auto"></div>
-                          <p class="lead text-white">Hi, I'm Max! I'm a software developer currently studying at Northeastern University, pursuing a BS in Computer Science with a concentration in Artificial Intelligence and a minor in Interaction Design. I consider myself flexible to all fields of software dev, but I take particular interest in web development and artificial intelligence. I also have a passion for graphic design and visual arts: check out a small portfolio here.</p>
+                          <p class="text-body text-white mt-4">Hi, I'm Max! I'm a software developer currently studying at Northeastern University, pursuing a BS in Computer Science with a concentration in Artificial Intelligence and a minor in Interaction Design. I consider myself flexible to all fields of software dev, but I take particular interest in web development and artificial intelligence. I also have a passion for graphic design and visual arts: check out a small portfolio here.</p>
                         </div>
                     </span>
                     <p class="text-center text-medium">my skills</p>
                     <div class="row mb-4"> 
-                        <div class="col">
+                        <div class="col-lg">
                             <p class="text-center text-title bg-secondary-50">front-end dev</p>
                             <!-- <i class="fab fa-html5 fa-3x text-white mx-2"></i>
                             <i class="fab fa-css3 fa-3x text-white mx-2"></i>
                             <i class="fab fa-js fa-3x text-white mx-2"></i>
                             <i class="fab fa-react fa-3x text-white mx-2"></i>
                             <i class="fab fa-angular fa-3x text-white mx-2"></i> -->
-                            <p class="text-white"> HTML, CSS, JS, Typescript, React/Redux, Angular, JQuery, Ajax, Bootstrap</p>
+                            <p class="text-white text-body"> HTML, CSS, JS, Typescript, React/Redux, Angular, JQuery, Ajax, Bootstrap</p>
                         </div>
-                        <div class="col">
+                        <div class="col-lg">
                             <p class="text-center text-title bg-secondary-50">back-end dev</p>
                             <!-- <i class="fab fa-node-js fa-3x text-white mx-2"></i>
                             <i class="fab fa-angular fa-3x text-white mx-2"></i> -->
-                            <p class="text-white">Node, Express, PHP, MongoDB/Mongoose, MySQL, JPA, Spring Boot</p>
+                            <p class="text-white text-body">Node, Express, PHP, MongoDB/Mongoose, MySQL, JPA, Spring Boot</p>
                         </div>
-                        <div class="col">
+                        <div class="col-lg">
                             <p class="text-center text-title bg-secondary-50">machine learning</p>
                             <!-- <i class="fab fa-python fa-3x text-white mx-2"></i> -->
-                            <p class="text-white">Python, PyTorch, TensorFlow, Scikit-learn, Pandas, Numpy, R, ml.js</p>
+                            <p class="text-white text-body">Python, PyTorch, TensorFlow, Scikit-learn, Pandas, Numpy, R, ml.js</p>
                         </div>
-                        <div class="col">
+                        <div class="col-lg">
                             <p class="text-center text-title bg-secondary-50">misc.</p>
                             <!-- <i class="fab fa-java fa-3x text-white mx-2"></i>
                             <i class="fab fa-git fa-3x text-white mx-2"></i>
                             <i class="fab fa-ad fa-3x text-white mx-2"></i> -->
-                            <p class="text-white">Java, Racket, LateX, Git, JetBrains IDE, VS Code, Eclipse, Photoshop, Illustrator</p>
+                            <p class="text-white text-body">Java, Racket, LateX, Git, JetBrains IDE, VS Code, Eclipse, Photoshop, Illustrator</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container-fluid min-vh-100 bg-steel-blue" id="projects">
+                <img src="media/projects_bg.svg" style="display: none; position:absolute; width: 100%; height: 100%" alt="background" />
                 <div style="height: 7%;"></div>
                 <div class="container py-2">
                     <p class="text-center text-header">projects</p>
@@ -85,8 +87,8 @@
                     <div id="project-list" class="row mt-4 text-center text-heading">
                     </div>
 
-                    <div id="selected-project" class="row mt-4">
-                        <div class="container border-20 p-50-20 bg-sea-green mt-4 mx-4 position-relative">
+                    <div id="selected-project" class="row mt-4" style="display:none;">
+                        <div class="container border-20 p-50-20 mt-4 mx-4 position-relative">
                             <button class="top-left-corner mt-3 btn text-white" onclick="closeProject()"><i class="fas fa-arrow-left"></i></button>
                             <p class="text-center mt-2 text-medium" id="project-title"></p>
                             <p class="text-description line-height-150 my-3 mx-5 px-2" id="project-description"></p>
