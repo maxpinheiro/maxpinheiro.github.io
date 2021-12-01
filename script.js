@@ -85,7 +85,7 @@ function setColors() {
     for (let i = 0; i < cards.length; i++) {
         let idx = Math.floor(Math.random() * classes.length);
         let className = classes[idx];
-        cards[i].classList.remove(classes);
+        cards[i].classList.remove(...classes);
         cards[i].classList.add(className);
     }
 }

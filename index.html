@@ -81,7 +81,11 @@
                 <img src="media/projects_bg.svg" style="display: none; position:absolute; width: 100%; height: 100%" alt="background" />
                 <div style="height: 7%;"></div>
                 <div class="container py-2">
-                    <p class="text-center text-header">projects</p>
+                    <div class="row d-flex justify-content-center align-items-baseline">
+                        <p class="text-center text-header mr-3">projects</p>
+                        <i class="fas fa-sync-alt fa-2x text-white ml-3" style="cursor:pointer;" onclick="setColors()"></i>
+                    </div>
+                    
                     <div class="border-top w-25 mx-auto"></div>
 
                     <div id="project-list" class="row mt-4 text-center text-heading">
@@ -101,43 +105,43 @@
                 <div class="container py-2 bg-dark-gray" style="width: 65%">
                     <p class="text-center text-header">contact</p>
                     <div class="border-top w-25 mx-auto"></div>
-                    <div class="pt-4 pb-5 ml-2 row">
-                        <div class="col-4"></div>
-                        <div class="col-4">
-                            <a href="https://www.instagram.com/notmaxpinheiro/" class="text-white" style="text-decoration: none;">
-                                <span class="row mx-auto">
-                                    <div class="rounded-circle border border-white px-2 py-1">
-                                        <i class="fab fa-instagram"></i>
-                                    </div>
-                                    <p class="my-auto ml-3 text-white d-inline">@notmaxpinheiro</p>
-                                </span>
-                            </a>
-                            <a href="http://github.com/maxpinheiro" class="text-white" style="text-decoration: none;">
-                                <span class="row mx-auto my-3">
-                                    <div class="rounded-circle border border-white px-2 py-1">
-                                        <i class="fab fa-github"></i>
-                                    </div>
-                                    <p class="my-auto ml-3 text-white d-inline">@maxpinheiro</p>
-                                </span>
-                            </a>
-                            <a href="mailto: pinheiro.m@northeastern.edu" class="text-white" style="text-decoration: none;">
-                                <span class="row mx-auto my-3">
-                                    <div class="rounded-circle border border-white px-2 py-1">
-                                        <i class="far fa-at"></i>
-                                    </div>
-                                    <p class="my-auto ml-3 text-white d-inline">pinheiro.m@northeastern.edu</p>
-                                </span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/mpin" class="text-white" style="text-decoration: none;">
-                                <span class="row mx-auto mb-3">
-                                    <div class="rounded-circle border border-white px-2 py-1">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </div>
-                                    <p class="my-auto ml-3 text-white d-inline">Max Pinheiro</p>
-                                </span>
-                            </a>
+                    <div class="pt-4 pb-5 ml-2">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <div>
+                                <a href="https://www.instagram.com/notmaxpinheiro/" class="text-white" style="text-decoration: none;">
+                                    <span class="row mx-auto d-flex">
+                                        <div class="rounded-circle border border-white px-2 py-1">
+                                            <i class="fab fa-instagram"></i>
+                                        </div>
+                                        <p class="my-auto ml-3 text-white d-inline text-heading">@notmaxpinheiro</p>
+                                    </span>
+                                </a>
+                                <a href="http://github.com/maxpinheiro" class="text-white" style="text-decoration: none;">
+                                    <span class="row mx-auto my-3 d-flex">
+                                        <div class="rounded-circle border border-white px-2 py-1">
+                                            <i class="fab fa-github"></i>
+                                        </div>
+                                        <p class="my-auto ml-3 text-white d-inline text-heading">@maxpinheiro</p>
+                                    </span>
+                                </a>
+                                <a href="mailto: pinheiro.m@northeastern.edu" class="text-white" style="text-decoration: none;">
+                                    <span class="row mx-auto my-3 d-flex">
+                                        <div class="rounded-circle border border-white px-2 py-1">
+                                            <i class="far fa-at"></i>
+                                        </div>
+                                        <p class="my-auto ml-3 text-white d-inline text-heading">pinheiro.m@northeastern.edu</p>
+                                    </span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/mpin" class="text-white" style="text-decoration: none;">
+                                    <span class="row mx-auto mb-3 d-flex">
+                                        <div class="rounded-circle border border-white px-2 py-1">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </div>
+                                        <p class="my-auto ml-3 text-white d-inline text-heading">Max Pinheiro</p>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-4"></div>
                     </div>
                 </div>
             </div>

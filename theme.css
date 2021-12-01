@@ -152,18 +152,26 @@ a:hover {
         font-size: 20px;
         color: white !important;
         text-shadow: 1px 1px 1px var(--shadow);
-    }
-    
-  }
+    }   
+}
 
 .text-heading {
     font-family: Arial;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 30px;
     color: white;
     text-shadow: 1px 1px 1px var(--shadow);
 }
 
+@media (min-width: 1000px) {
+    .text-heading {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 16px;
+        color: white;
+        text-shadow: 1px 1px 1px var(--shadow);
+    }
+}
 
 .text-description {
     font-family: Arial;
