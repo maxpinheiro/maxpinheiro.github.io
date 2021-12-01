@@ -120,6 +120,18 @@ a:hover {
     text-shadow: 1px 1px 1px var(--shadow);
 }
 
+.text-description {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+.line-height-150 {
+    line-height: 200%;
+}
+
 .card-bubble {
     padding: 100px 15px;
     border-radius: 20px;
@@ -131,7 +143,7 @@ a:hover {
 }
 
 .p-50-20 {
-    padding: 50px 20px;
+    padding: 100px 20px;
 }
 
 .text-card-title {
@@ -206,4 +218,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.top-left-corner {
+    position: absolute;
+    top: 5px;
+    left: 5px;
 }

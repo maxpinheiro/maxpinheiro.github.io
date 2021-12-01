@@ -61,7 +61,9 @@ function setListeners() {
         //$(`#card${i}`).hover(() => {
             if (selectedProject === '') {
                 selectedProject = `card${i}`;
-                $(`#card${i}`).html(`<p class="text-card-body m-3">${descriptions[i-1].description}</p>`);
+                $('#project-list').hide();
+                $('#selected-project').show();
+                $('#project-description').html(descriptions[i-1].description);
             }
         }, () => {});
     }
