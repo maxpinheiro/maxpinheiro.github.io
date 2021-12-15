@@ -1,4 +1,9 @@
-const descriptions = [{
+const descriptions = [
+{
+    "title": "spotify lyrics",
+    "description": "The Spotify Lyric Player is a personal project I've been working on for the past few months. I came up with the idea when I was trying to learn the lyrics to songs and wished for a way to look at the lyrics of the song I was currently listening to without having to search the internet. So, the web app determines a Spotify user's current playback and displays the song's lyrics, descriptions, and audio features. I use Spotify's <a href='https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-analysis/' >Web API</a> to get track information for the current playback (tempo, pitch, energy, etc.) and <a href='https://www.genius.com'>Genius</a> for song lyrics. Check out the app <a href='https://maxpinheiro.github.io/spotify-lyrics/' >here</a>, or the source code <a href='https://github.com/maxpinheiro/spotify-lyrics' >here</a>."
+},
+{
     "title": "a-eye",
     "description": "A-eye is a project my team at Sandbox is working on. It's a collection of interactive computer vision modules developed for Northeastern's 'Your Eye and AI' course. It's built with React, and uses ml.js for various modules. Check out the site <a href='https://a-eye.sandboxnu.com/' >here</a>, or the source code <a href='https://github.com/sandboxnu/a-eye' >here</a>."
 }, 
