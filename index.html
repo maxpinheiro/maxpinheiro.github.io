@@ -12,14 +12,14 @@
     <body>
         <div>
             <div class="sticky-top navbar justify-content-between p-3" style="background-color: #343A40;" id="navbar">
-                <span>
-                    <img src="./media/m.png" alt="m" class="mb-1" style="width: 35px;"/>
-                    <a href="" class="text-title my-auto" style="text-decoration: none;">Max Pinheiro</a>
+                <span class="d-flex align-items-center">
+                    <img src="./media/m.png" alt="m" class="mr-1" style="width: 35px;"/>
+                    <a href="" class="text-brand my-auto" style="text-decoration: none;">Max Pinheiro</a>
                 </span>
                 <div class="">
                     <a href="#projects" class="text-heading mx-2 my-auto" style="text-decoration: none;">projects</a>
-                    <a href="https://github.com/maxpinheiro" class="text-heading mx-2 my-auto" style="text-decoration: none;">github</a>
-                    <a href="./media/resume.pdf" class="text-heading mx-2 my-auto" style="text-decoration: none;">resume</a>
+                    <a href="https://github.com/maxpinheiro" class="text-heading mx-2 my-auto" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">github</a>
+                    <a href="./media/resume.pdf" class="text-heading mx-2 my-auto" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">resume</a>
                     <a href="#contact" class="text-heading mx-2 my-auto" style="text-decoration: none;">contact</a>
                 </div>
             </div>
@@ -91,8 +91,8 @@
                     <div id="project-list" class="row mt-4 text-center text-heading">
                     </div>
 
-                    <div id="selected-project" class="row mt-4" style="display:none;">
-                        <div class="container border-20 p-50-20 mt-4 mx-4 position-relative">
+                    <div id="selected-project" class="row border-20 mt-4" style="display:none;">
+                        <div class="container p-50-20 mt-4 mx-4 position-relative">
                             <button class="top-left-corner mt-3 btn text-white" onclick="closeProject()"><i class="fas fa-times fa-2x"></i></button>
                             <p class="text-center mt-2 text-medium" id="project-title"></p>
                             <p class="text-description line-height-150 my-3 mx-5 px-2" id="project-description"></p>
