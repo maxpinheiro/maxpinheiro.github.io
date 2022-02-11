@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 
 import './theme.css';
 import App from "./App";
@@ -10,11 +10,12 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
+console.log('starting');
 ReactDOM.render(
   <React.StrictMode>
       <div className="">
-        <Navbar />
         <Router>
+          <Navbar />
             <Routes>
                 <Route path="/" element={<App />}/>
                 <Route path="/about" element={<About />}/>

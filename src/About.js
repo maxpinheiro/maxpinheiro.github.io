@@ -13,7 +13,7 @@ function About() {
             <div className="col-lg-8">
               <p className="text-center text-header">about me</p>
               <div className="border-top my-3 w-50 mx-auto"></div>
-              <p className="text-body text-white mt-4">Hi, I`&apos`m Max! I`&apos`m a software developer currently studying at Northeastern University, pursuing a BS in Computer Science with a concentration in Artificial Intelligence and a minor in Interaction Design. I consider myself flexible to all fields of software dev, but I take particular interest in web development and artificial intelligence. I also have a passion for graphic design and visual arts: check out a small portfolio <a href="/portfolio" style={{textDecoration: "underline", color: "white"}}>here</a>.</p>
+              <p className="text-body text-white mt-4">Hi, I'm Max! I'm a software developer currently studying at Northeastern University, pursuing a BS in Computer Science with a concentration in Artificial Intelligence and a minor in Interaction Design. I consider myself flexible to all fields of software dev, but I take particular interest in web development and artificial intelligence. I also have a passion for graphic design and visual arts: check out a small portfolio <a href="/portfolio" style={{textDecoration: "underline", color: "white"}}>here</a>.</p>
             </div>
         </span>
         <p className="text-center text-medium">my skills</p>
