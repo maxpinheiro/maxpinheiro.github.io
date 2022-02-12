@@ -44,17 +44,17 @@ function Portfolio() {
         return array
     }
 
-    const types = ['all pieces', 'paintings', 'sketches', 'graphic art', 'miscelaneous', 'random piece']
+    const types = ['all pieces', 'random piece', 'paintings', 'sketches', 'graphic art', 'miscelaneous']
     return (
         <div className="container-fluid min-vh-100 bg-dark-violet" id="portfolio">
             <div className="container d-flex flex-column justify-content-center py-1">
                 <p className="text-center text-header">portfolio</p>
                 {
                     selectedType === null && 
-                    <div className="row">
+                    <div className="responsive-falling-row">
                         {
                             types.map((type, idx) => 
-                            <div className="col border rounded-lg py-3 mx-3 pointer" key={idx} onClick={() => selectWorks(type)} ><p className="text-center text-white text-title">{type}</p></div>)
+                            <div className="col border rounded-lg py-3 my-1 mx-auto pointer d-flex " key={idx} onClick={() => selectWorks(type)} ><p className="text-center mx-auto  my-auto text-white text-title">{type}</p></div>)
                         }
                         
                     </div>
@@ -71,7 +71,7 @@ function Portfolio() {
                     selectedType !== null && pieces !== null && 
                     <div>
                         {
-                            loadedCt === pieces.length &&
+                            //loadedCt === pieces.length &&
                             <span className="d-flex justify-content-center align-items-center mb-2">
                                 <button className="btn text-white" onClick={() => {setSelectedType(null); setPieces(null); setLoadedCt(0)}}><i className="fas fa-arrow-left fa-2x"></i></button>
                                 <p className="text-center text-medium my-auto ml-3">{selectedType}</p>
@@ -91,12 +91,17 @@ function Portfolio() {
                             {
                                 pieces.map(({name, url}, idx) => (
                                     <div key={idx} className="mb-3">
-                                        {/*<img src={url} alt={name} style={{maxWidth: "25vw"}} onLoad={() => setLoadedIdxs(prevLoaded => [...prevLoaded, idx])}/>*/}
-                                        {/*loadedIdxs.includes(idx) && <p className="text-center text-title text-white">{name}</p>*/}
-                                        <img src={url} alt={name} style={{maxHeight: "70vh", maxWidth: "75vw"}} onLoad={() => setLoadedCt(prev => prev + 1)} />
+                                        {/*<img src={url} alt={name} style={{maxHeight: "70vh", maxWidth: "75vw"}} onLoad={() => setLoadedIdxs(prevLoaded => [...prevLoaded, idx])}/>*/}
+                                        {/*(true || loadedIdxs.includes(idx)) && <p className="text-center text-title text-white font-italic mt-1">{name}</p>*/}
+                                        {<img src={url} alt={name} style={{maxHeight: "70vh", maxWidth: "75vw"}} onLoad={() => setLoadedCt(prev => prev + 1)} />}
                                         {loadedCt === pieces.length && <p className="text-center text-title text-white font-italic mt-1">{name}</p>}
                                     </div>
                                 ))
+                            }
+
+                            {
+                                selectedType === 'all pieces' &&
+                                <p className="text-white text-about pointer underline" onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>back to top</p>
                             }
                             
                         </div>

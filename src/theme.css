@@ -109,7 +109,7 @@ a:hover {
 .text-medium {
     font-family: Arial;
     font-weight: medium;
-    font-size: 45px;
+    font-size: 40px;
     color: white;
     text-shadow: 2px 2px 2px var(--shadow);
 }
@@ -126,7 +126,7 @@ a:hover {
 .text-title {
     font-family: Arial;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     text-shadow: 1px 1px 1px var(--shadow);
 }
@@ -146,6 +146,14 @@ a:hover {
     font-family: Arial;
     font-weight: normal;
     font-size: 35px;
+    color: white !important;
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+.text-about {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 20;
     color: white !important;
     text-shadow: 1px 1px 1px var(--shadow);
 }
@@ -181,7 +189,7 @@ a:hover {
 .text-brand {
     font-family: Arial;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 25px;
     color: white;
     text-shadow: 1px 1px 1px var(--shadow);
 }
@@ -216,6 +224,11 @@ a:hover {
     }
 }
 
+
+.underline {
+    text-decoration: underline;
+}
+
 /*  MISC  */
 
 .line-height-150 {
@@ -233,7 +246,7 @@ a:hover {
 }
 
 .p-50-20 {
-    padding: 100px 20px;
+    padding: 50px 20px;
 }
 
 .text-card-title {
@@ -336,4 +349,16 @@ a:hover {
 
 .sticky {
     position: sticky;
+}
+
+.responsive-falling-row {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 920px) {
+    .responsive-falling-row {
+        display: flex;
+        flex-direction: row;
+    }
 }

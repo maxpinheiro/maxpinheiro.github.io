@@ -37,10 +37,10 @@ function Projects() {
                         }
                     </div> :
                     <div id="selected-project" className={`row border-20 mt-4 ${cardColors[selectedProject]}`}>
-                        <div className="container p-50-20 mt-4 mx-4 position-relative">
-                            <button className="top-left-corner mt-3 btn text-white" onClick={() => setSelectedProject(-1)}><i className="fas fa-times fa-2x"></i></button>
-                            <p className="text-center mt-2 text-medium" id="project-title">{descriptions[selectedProject].title || ""}</p>
-                            <p className="text-description line-height-150 my-3 mx-5 px-2" id="project-description">{descriptions[selectedProject].description || ""}</p>
+                        <div className="container p-50-20 mt-2 mx-2 position-relative">
+                            <button className="top-left-corner btn text-white" onClick={() => setSelectedProject(-1)}><i className="fas fa-times fa-2x"></i></button>
+                            <p className="text-center text-medium" id="project-title">{descriptions[selectedProject].title || ""}</p>
+                            <p className="text-about line-height-150 my-3 mx-2" id="project-description" dangerouslySetInnerHTML={{__html: descriptions[selectedProject].description || ""}}></p>
                         </div>
                     </div>
                 }

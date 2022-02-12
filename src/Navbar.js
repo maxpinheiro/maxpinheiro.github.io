@@ -26,8 +26,8 @@ function Navbar() {
                     <Link to="/about" onClick={() => setNavOpen(false)} className=" text-heading mx-2 my-auto" style={{textDecoration: "none"}}>about</Link>
                     <Link to="/projects" onClick={() => setNavOpen(false)} className=" text-heading mx-2 my-auto" style={{textDecoration: "none"}}>projects</Link>
                     <Link to="/portfolio" onClick={() => setNavOpen(false)} className=" text-heading mx-2 my-auto" style={{textDecoration: "none"}}>portfolio</Link>
-                    <Link to="https://github.com/maxpinheiro" onClick={() => setNavOpen(false)} className=" text-heading mx-2 my-auto" style={{textDecoration: "none"}} target="_blank" rel="noopener noreferrer">github</Link>
-                    <Link to={resume} onClick={() => setNavOpen(false)} className=" text-heading mx-2 my-auto" style={{textDecoration: "none"}} target="_blank" rel="noopener noreferrer">resume</Link>
+                    <a href="https://github.com/maxpinheiro" onClick={() => setNavOpen(false)} className=" text-heading mx-2 my-auto" style={{textDecoration: "none"}} target="_blank" rel="noopener noreferrer">github</a>
+                    <a href={resume} onClick={() => setNavOpen(false)} className=" text-heading mx-2 my-auto" style={{textDecoration: "none"}} target="_blank" rel="noopener noreferrer">resume</a>
                     <Link to="/contact" onClick={() => setNavOpen(false)} className=" text-heading mx-2 my-auto" style={{textDecoration: "none"}}>contact</Link>
                 </div>
             </div>
