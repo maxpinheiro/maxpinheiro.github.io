@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { getAllSketches, getAllPaintings, getAllGraphics, getAllPieces, getRandomPiece } from "./art-service";
+import { getAllSketches, getAllPaintings, getAllGraphics, getAllPieces, getRandomPiece } from "../art-service";
 import BounceLoader from "react-spinners/BounceLoader";
 
 
@@ -100,8 +100,8 @@ function Portfolio() {
                             }
 
                             {
-                                selectedType === 'all pieces' &&
-                                <p className="text-white text-about pointer underline" onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>back to top</p>
+                                pieces.length > 3 &&
+                                <p className="text-white text-about pointer underline mb-3" onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>back to top</p>
                             }
                             
                         </div>

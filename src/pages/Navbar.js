@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import logo from "./media/m.png"
-import resume from "./media/resume.pdf"
+import logo from "../media/m.png"
+import resume from "../media/resume.pdf"
 
 function Navbar() {
     const [navOpen, setNavOpen] = useState(false);

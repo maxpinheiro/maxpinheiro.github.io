@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import profile from "./media/profile.png";
+import profile from "../media/profile.png";
 
 function About() {
   return (
@@ -26,7 +26,7 @@ function About() {
                 <i className="fab fa-js fa-3x text-white mx-2"></i>
                 <i className="fab fa-react fa-3x text-white mx-2"></i>
                 <i className="fab fa-angular fa-3x text-white mx-2"></i> */}
-                <p className="text-white text-about"> HTML | CSS | JS | Typescript | React/Redux | Angular | JQuery | Ajax | Bootstrap</p>
+                <p className="text-white text-about"> HTML | CSS | JS | Typescript | React/Redux | Angular | JQuery | Bootstrap/Tailwind</p>
             </div>
             <div className="col-lg">
                 <p className="text-center text-title bg-secondary-50">back-end dev</p>

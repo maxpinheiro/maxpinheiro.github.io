@@ -1,0 +1,91 @@
+:root {
+    --lightblue: #75B8C8;
+    --steelblue: #4e6996;
+    --seagreen: #44AF69;
+    --darkseagreen: #2b8c4c;
+    --lightgray: #636564;
+    --darkgray: #343A40;
+    --darkviolet: #7F6289;
+    --tan: #E8D2AE;
+    --darktan: #9C8259;
+    --shadow: #4d4c4c;
+    --shadowlight: #636161;
+}
+
+/* BACKGROUND COLORS */
+
+.bg-light-blue {
+    background-color: var(--lightblue);
+}
+
+.text-light-blue {
+    color: var(--lightblue);
+}
+
+.bg-steel-blue {
+    background-color: var(--steelblue);
+}
+
+.text-steel-blue {
+    color: var(--steelblue);
+}
+
+.bg-sea-green {
+    background-color: var(--seagreen);
+}
+
+.bg-dark-sea-green {
+    background-color: var(--darkseagreen);
+}
+
+.text-sea-green {
+    color: var(--seagreen);
+}
+
+.bg-light-gray {
+    background-color: var(--lightgray);
+}
+
+.text-light-gray {
+    color: var(--lightgray);
+}
+
+.bg-dark-gray {
+    background-color: var(--darkgray);
+}
+
+.text-dark-gray {
+    color: var(--darkgray);
+}
+
+.bg-dark-violet {
+    background-color: var(--darkviolet);
+}
+
+.text-dark-violet {
+    color: var(--darkviolet);
+}
+
+.bg-tan {
+    background-color: var(--tan);
+}
+
+.text-tan {
+    color: var(--tan);
+}
+
+.bg-secondary-50 {
+    background-color: rgba(108, 117, 125, 0.5);
+}
+
+.border-3 {
+    border-width:6px;
+}
+
+.greyed-out {
+    color:rgb(86, 86, 86)
+}
+
+.greyed-out:hover {
+    color:rgb(140, 140, 140)
+}

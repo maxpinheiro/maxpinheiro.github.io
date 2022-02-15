@@ -1,0 +1,161 @@
+/* GLOBAL CHANGES */
+
+a:hover {
+    text-decoration: none;
+    color: rgb(179, 38, 195);
+}
+
+/* FONTS */
+
+.text-main {
+    font-family: Arial;
+    font-weight: bolder;
+    font-size: 90px;
+    line-height: normal;
+    color: white;
+    text-shadow: 3px 3px 4px var(--shadow);
+}
+
+.text-header {
+    font-family: Arial;
+    font-weight: medium;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 2px var(--shadow);
+}
+
+.text-medium {
+    font-family: Arial;
+    font-weight: medium;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 2px var(--shadow);
+}
+@media (min-width: 920px) {
+    .text-medium {
+        font-family: Arial;
+        font-weight: medium;
+        font-size: 35px;
+        color: white;
+        text-shadow: 2px 2px 2px var(--shadow);
+    }
+}
+
+.text-title {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+@media (min-width: 920px) {
+    .text-title {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 20px;
+        color: white;
+        text-shadow: 1px 1px 1px var(--shadow);
+    }
+}
+
+
+.text-body {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 35px;
+    color: white !important;
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+.text-about {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 20;
+    color: white !important;
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+@media (min-width: 920px) {
+    .text-body {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 20px;
+        color: white !important;
+        text-shadow: 1px 1px 1px var(--shadow);
+    }   
+}
+
+.text-heading {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+@media (min-width: 920px) {
+    .text-heading {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 16px;
+        color: white;
+        text-shadow: 1px 1px 1px var(--shadow);
+    }
+}
+
+.text-brand {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 25px;
+    color: white;
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+@media (min-width: 920px) {
+    .text-brand {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 24px;
+        color: white;
+        text-shadow: 1px 1px 1px var(--shadow);
+    }
+}
+
+
+.text-description {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 1.75 !important;
+    color: white;
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+@media (min-width: 1000px) {
+    .text-description {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 20px;
+        color: white;
+        text-shadow: 1px 1px 1px var(--shadow);
+    }
+}
+
+/* TEXT SIZING */
+
+.text-22 {
+    font-size: 22px;
+}
+
+@media (min-width: 1000px) {
+    .md-text-35 {
+        font-size: 35px;
+    }
+}
+
+/* MISC. TEXT STYLING */
+
+.underline {
+    text-decoration: underline;
+}

@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 
-import './theme.css';
-import App from "./App";
-import Navbar from "./Navbar";
-import Projects from "./Projects";
-import About from "./About";
-import Portfolio from "./Portfolio";
-import Contact from "./Contact";
+import './themes/colors.css';
+import './themes/typography.css';
+import './themes/utilities.css';
+import Home from "./pages/Home";
+import Navbar from "./pages/Navbar";
+import Projects from "./pages/Projects";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,7 +18,7 @@ ReactDOM.render(
         <Router>
           <Navbar />
             <Routes>
-                <Route path="/" element={<App />}/>
+                <Route path="/" element={<Home />}/>
                 <Route path="/about" element={<About />}/>
                 <Route path="/projects" element={<Projects />}/>
                 <Route path="/portfolio" element={<Portfolio />}/>
