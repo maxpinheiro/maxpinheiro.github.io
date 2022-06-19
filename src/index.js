@@ -7,10 +7,11 @@ import './themes/typography.css';
 import './themes/utilities.css';
 import Home from "./pages/Home";
 import Navbar from "./pages/Navbar";
-import Projects from "./pages/Projects";
+//import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import ProjectsNew from './pages/ProjectsNew';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,7 +21,7 @@ ReactDOM.render(
             <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/about" element={<About />}/>
-                <Route path="/projects" element={<Projects />}/>
+                <Route path="/projects" element={<ProjectsNew />}/>
                 <Route path="/portfolio" element={<Portfolio />}/>
                 <Route path="/contact" element={<Contact />}/>
             </Routes>

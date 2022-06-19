@@ -3,7 +3,7 @@ import {descriptions} from "../media/projects";
 
 const classes = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'];
 
-function Projects() {
+function ProjectsNew() {
     const [selectedProject, setSelectedProject] = useState(-1);
     const [cardShape, setCardShape] = useState('card-bubble')
     const [cardColors, setCardColors] = useState(descriptions.map(() => classes[Math.floor(Math.random() * classes.length)]));
@@ -29,7 +29,6 @@ function Projects() {
                 <div className="d-flex mx-auto justify-content-center">
                     <i className={`fas fa-square fa-2x ${cardShape === 'card-bubble' ? 'text-white' : 'greyed-out'} ml-3 pointer`} onClick={() => setCardShape('card-bubble')}></i>
                     <i className={`fas fa-circle fa-2x ${cardShape === 'card-circle' ? 'text-white' : 'greyed-out'} ml-3 pointer`} onClick={() => setCardShape('card-circle')}></i>
-                    <i className={`fas fa-diamond fa-2x ${cardShape === 'card-diamond' ? 'text-white' : 'greyed-out'} ml-3 pointer`} onClick={() => setCardShape('card-diamond')}></i>
                 </div>
 
                 {
@@ -59,4 +58,4 @@ function Projects() {
     );
 }
 
-export default Projects;
+export default ProjectsNew;
