@@ -1,0 +1,382 @@
+@use "sass:list";
+
+.border-20 {
+    border-radius: 20px;
+}
+
+.p-50-20 {
+    padding: 50px 20px;
+}
+
+.text-card-title {
+    font-family: Arial;
+    font-weight: medium;
+    font-size: 30px;
+    color: white;
+}
+
+.text-card-body {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0.5px 0.5px 0.5px #4d4c4c;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/*
+@media screen and (max-width: 600px) {
+    .nav-item a:not(.nav-icon) {
+        display: none;
+    }
+}
+
+.nav-icon {
+    display: none;
+} 
+
+@media screen and (max-width: 600px) {
+    .nav-icon {
+      float: right;
+      display: block;
+    }
+}*/
+
+.responsive-falling-row {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 920px) {
+    .responsive-falling-row {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    .mobile-rotate {
+        transform: rotate(90deg);
+            /* All browsers support */
+            -moz-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+    }
+}
+
+
+@media (min-width: 920px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+.top-45 {
+    position: absolute;
+    top: 45%
+}
+
+@media (max-width: 600px) {
+    .sm-top-30 {
+        position: absolute;
+        top: 30%
+    }
+}
+
+//       0       1       2       3      4      5     6
+$rems: (0rem, 0.25rem, 0.5rem, 1rem, 1.5rem, 2rem, 3rem);
+@for $i from 0 through 6 {
+    .m-#{$i} {
+        margin: list.nth($rems, $i+1);
+    }
+
+    .mt-#{$i} {
+        margin-top: list.nth($rems, $i+1) !important;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: list.nth($rems, $i+1) !important;
+    }
+
+    .ml-#{$i} {
+        margin-left: list.nth($rems, $i+1) !important;
+    }
+
+    .mr-#{$i} {
+        margin-right: list.nth($rems, $i+1) !important;
+    }
+
+    @media (min-width: 920px) {
+        .lg-m-#{$i} {
+            margin: list.nth($rems, $i+1)  !important;
+        }
+        .lg-mx-#{$i} {
+            margin-left: list.nth($rems, $i+1)  !important;
+            margin-right: list.nth($rems, $i+1)  !important;
+        }
+        .lg-my-#{$i} {
+            margin-top: list.nth($rems, $i+1)  !important;
+            margin-bottom: list.nth($rems, $i+1)  !important;
+        }
+    }
+
+    .mx-#{$i} {
+        margin-left: list.nth($rems, $i+1) !important;
+        margin-right: list.nth($rems, $i+1) !important;
+    }
+
+    .my-#{$i} {
+        margin-top: list.nth($rems, $i+1) !important;
+        margin-bottom: list.nth($rems, $i+1) !important;
+    }
+
+    .p-#{$i} {
+        padding: list.nth($rems, $i+1);
+    }
+
+    .pt-#{$i} {
+        padding-top: list.nth($rems, $i+1) !important;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: list.nth($rems, $i+1) !important;
+    }
+
+    .pl-#{$i} {
+        padding-left: list.nth($rems, $i+1) !important;
+    }
+
+    .pr-#{$i} {
+        padding-right: list.nth($rems, $i+1) !important;
+    }
+
+    .pr-#{$i} {
+        padding-right: list.nth($rems, $i+1) !important;
+    }
+
+    @media (min-width: 920px) {
+        .lg-p-#{$i} {
+            padding: list.nth($rems, $i+1) !important;
+        }
+        .lg-px-#{$i} {
+            padding-left: list.nth($rems, $i+1) !important;
+            padding-right: list.nth($rems, $i+1) !important;
+        }
+        .lg-py-#{$i} {
+            padding-top: list.nth($rems, $i+1) !important;
+            padding-bottom: list.nth($rems, $i+1) !important;
+        }
+        .lg-pr-#{$i} {
+            padding-right: list.nth($rems, $i+1) !important;
+        }
+    }
+
+    .px-#{$i} {
+        padding-left: list.nth($rems, $i+1) !important;
+        padding-right: list.nth($rems, $i+1) !important;
+    }
+
+    .py-#{$i} {
+        padding-top: list.nth($rems, $i+1) !important;
+        padding-bottom: list.nth($rems, $i+1) !important;
+    }
+
+    .mx-bw-#{$i} > *:not(:last-child) {
+        margin-right: list.nth($rems, $i+1) !important;
+    }
+    
+    .my-bw-#{$i} > *:not(:last-child) {
+        margin-bottom: list.nth($rems, $i+1) !important;
+    }
+}
+
+
+
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.my-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+
+.mx-bw-5 > *:not(:last-child) {
+    margin-right: 5px;
+}
+
+.border {
+    border: solid 1px;
+}
+
+.border-top {
+    border-top: solid 1px;
+}
+
+.border-bottom {
+    border-bottom: solid 1px;
+}
+
+.border-white {
+    border-color: white;
+}
+
+.border-white-50 {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.hover-border-white {
+    border-color: black;
+    transition: 0.8s;
+}
+
+.hover-border-white:hover {
+    border-color: white;
+}
+
+.aspect-square {
+    width: 100% !important;
+    padding-top: 100% !important;
+}
+
+.disabled {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.rounded-md {
+    border-radius: 20px;
+}
+
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+.hover-rotate {
+    transition: 5s;
+    transition-delay: 0s;
+
+    &:hover {
+        //animation: rotating 2s linear infinite;
+        transform: rotate(720deg);
+        transition-delay: 0.2s;
+    }
+}
+
+.close-icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.close-bar {
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+
+    &:nth-of-type(1) {
+        top: 14px;
+        transform: rotate(45deg);
+    }
+    &:nth-of-type(2) {
+        top: 14px;
+        transform: rotate(-45deg);
+    }
+}
+
+.menu, .menu-open {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.bar {
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    transition: 0.4s;
+
+    &:nth-of-type(1) {
+        top: 5px;
+        transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s;
+        animation: mrotr 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+    }
+    &:nth-of-type(2) {
+        top: 14px;
+        transition: 0.3s ease 0.3s;
+        animation: fade 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+    }
+    &:nth-of-type(3) {
+        top: 23px;
+        transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s;
+        animation: mrotl 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+    }
+}
+
+.menu-open .bar {
+    &:nth-of-type(1) {
+        top: 14px;
+        transform: rotate(45deg);
+        transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;
+    }
+    &:nth-of-type(2) {
+        opacity: 0;
+    }
+    &:nth-of-type(3) {
+        top: 14px;
+        transform: rotate(-45deg);
+        transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.min-h-75vh {
+    min-height: 75vh !important;
+}
+
+$max-widths: (500, 750, 900);
+@each $width in $max-widths {
+    .max-w-#{$width} {
+        max-width: #{$width}px;
+    }
+}

@@ -1,0 +1,54 @@
+$colors: (
+    "white": #ffffff,
+    "black": #000000,
+    "light-gray": #b4b4b4,
+    /* CLASSIC */
+    "steel-blue": #4e6996,
+    "dark-sea-green": #2b8c4c,
+    "dark-gray": #343A40,
+    "dark-violet": #7F6289,
+    "dark-tan": #9C8259,
+    /* PRIMARY */
+    "primary-red": #EB5656,
+    "primary-yellow": #F3D74C,
+    "primary-blue": #6ABBF1,
+    /* PURPLES */
+    "blue-violet": #501C80,
+    "purple": #6525A5,
+    "dark-orchid": #180b22,
+    "lavender": #B56AEE,
+    /* COFFEE */
+    "dark-coffee": #7F5539,
+    "brown-sugar": #9C6644,
+    "cafe-au-lait": #B08968,
+    "burlywood": #DDB892,
+    "black-coffee": #37281f
+);
+
+/* BACKGROUND COLORS */
+
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+    
+    .text-#{$name} {
+        color: $color;
+    }
+}
+
+.bg-secondary-50 {
+    background-color: rgba(108, 117, 125, 0.5);
+}
+
+.border-3 {
+    border-width:6px;
+}
+
+.greyed-out {
+    color:rgb(86, 86, 86)
+}
+
+.greyed-out:hover {
+    color:rgb(140, 140, 140)
+}

@@ -1,0 +1,249 @@
+/* GLOBAL CHANGES */
+$shadow: #4d4c4c;
+$shadow-light: rgb(216, 216, 216);
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #44AF69;
+}
+
+/* FONTS */
+
+.text-shadow {
+    text-shadow: 1px 1px 1px inherit; //$shadow;
+}
+
+.text-shadow-lg {
+    text-shadow: 2px 2px 2px inherit; //$shadow;
+}
+
+.shadow-dark {
+    text-shadow: 2px 2px 2px $shadow;
+}
+
+.shadow-light {
+    text-shadow: 2px 2px 2px $shadow-light;
+}
+
+.text-shadow-none {
+    text-shadow: none !important;
+}
+
+.text-main {
+    font-family: Arial;
+    font-weight: bolder;
+    font-size: 90px;
+    line-height: normal;
+    text-shadow: 3px 3px 4px inherit; //$shadow;
+}
+
+.text-header {
+    font-family: Arial;
+    font-weight: medium;
+    font-size: 50px;
+    @extend .text-shadow-lg;
+}
+
+.text-medium {
+    font-family: Arial;
+    font-weight: medium;
+    font-size: 40px;
+    @extend .text-shadow-lg;
+}
+
+@media (min-width: 920px) {
+    .text-medium {
+        font-family: Arial;
+        font-weight: medium;
+        font-size: 35px;
+    }
+}
+
+.text-title {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px inherit; //$shadow;
+}
+
+@media (min-width: 920px) {
+    .text-title {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 20px;
+    }
+}
+
+
+.text-body {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 35px;
+    @extend .text-shadow;
+}
+
+@media (min-width: 920px) {
+    .text-body {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 20px;
+    }   
+}
+
+.text-about {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 20px;
+    @extend .text-shadow;
+}
+
+@media (min-width: 920px) {
+    .text-about {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 16px;
+    }   
+}
+
+.text-heading {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 30px;
+    @extend .text-shadow;
+}
+
+@media (min-width: 920px) {
+    .text-heading {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 16px;
+    }
+}
+
+.text-icon {
+    font-size: 30px;
+    @extend .text-shadow;
+}
+
+@media (min-width: 920px) {
+    .text-icon {
+        font-size: 16px;
+    }
+}
+
+.text-contact {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 20px;
+    @extend .text-shadow;
+}
+
+@media (min-width: 920px) {
+    .text-contact {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 16px;
+    }
+}
+
+.text-brand {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 25px;
+    @extend .text-shadow;
+}
+
+@media (min-width: 920px) {
+    .text-brand {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 22px;
+    }
+}
+
+
+.text-description {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 1.75 !important;
+    @extend .text-shadow;
+}
+
+@media (min-width: 1000px) {
+    .text-description {
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 20px;
+    }
+}
+
+/* TEXT SIZING */
+
+.text-22 {
+    font-size: 22px;
+}
+
+@media (min-width: 1000px) {
+    .md-text-35 {
+        font-size: 35px;
+    }
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+/* MISC. TEXT STYLING */
+
+.underline {
+    text-decoration: underline;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .sm-text-center {
+        text-align: center !important;
+    }
+}
+
+
+.text-dec-none {
+    text-decoration: none;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.double-spaced {
+    line-height: 2 !important;
+}
+
+.line-height-150 {
+    line-height: 150%;
+}
+
+@media (min-width: 920px) {
+    .lg-line-height-150 {
+        line-height: 150%;
+    }
+}
+
+.line-height-200 {
+    line-height: 200%;
+}
+
+@media (min-width: 920px) {
+    .lg-line-height-200 {
+        line-height: 200%;
+    }
+}
