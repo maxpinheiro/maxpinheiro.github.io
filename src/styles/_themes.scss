@@ -1,0 +1,87 @@
+/*
+ * CARDS
+ */ 
+
+.project-card {
+    transition: width 0.6s ease-in-out, height 0.6s ease-in-out;
+}
+
+.card-bubble {
+    height: 250px;
+    transition: 0.7s;
+    border-radius: 10px;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.75);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .card-bubble {
+        height: 150px;
+    }
+}
+
+.card-circle {
+    border-radius: 100%;
+    height: 340px;
+    transition: 0.7s;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        box-shadow: 15px 15px 1px rgba(0, 0, 0, 0.9);
+    }
+}
+
+@media (max-width: 600px) {
+    .card-circle {
+        height: 150px;
+    }
+}
+
+$card-colors: (
+    "classic": (
+        (#35bfad, #3b7ea8),
+        (#0B9BD9, #195185),
+        (#06A191, #346655),
+        (#10B37C, #1d694f),
+        (#237A63, #295c4e),
+        (#4a9cbc, #1898e2),
+    ),
+    "primary": (
+        (#EB5656, #af2d2d),
+        (#F3D74C, #ab9421),
+        (#6ABBF1, #2471a4),
+    ),
+    "purples": (
+        (#501C80, #501C80),
+        (#6525A5, #6525A5),
+        (#8E39D3, #8E39D3),
+        (#B56AEE, #B56AEE),
+    ),
+    "coffee": (
+        (#7F5539, #7F5539),
+        (#9C6644, #9C6644),
+        (#B08968, #B08968),
+        (#DDB892, #DDB892),
+    )
+);
+
+@mixin card-color($bg, $border) {
+    background-color: $bg;
+    border: 2px solid $bg;
+
+    &:hover {
+        border-color: $border;
+    }
+}
+
+@each $name, $list in $card-colors {
+    @for $i from 1 through length($list) {
+        .card-#{$name}-#{$i} {
+            @include card-color(nth(nth($list, $i), 1), nth(nth($list, $i), 2));
+        }
+    }
+}
