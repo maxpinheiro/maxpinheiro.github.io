@@ -23,20 +23,20 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, cardClass, tex
             }
             {
                 project.siteLink &&
-                <p className="text-center text-about">Check out the project&nbsp; <a href={project.siteLink} target='_blank' rel='noopener noreferrer'>here</a></p>
+                <p className="text-center text-about">Check out the project <a href={project.siteLink} target='_blank' rel='noopener noreferrer'>here</a></p>
             }
             {
                 project.codeLink &&
-                <p className="text-center text-about">Check out the source code &nbsp;
+                <p className="text-center text-about">Check out the source code&nbsp;
                     {
                         Array.isArray(project.codeLink) ? 
                         project.codeLink.map((link, idx) => 
                             <span>
-                                {project.codeLink && idx > 0 ? idx === project.codeLink.length - 1 ? ', and ' : ', ' : ' '}
+                                { project.codeLink && idx > 0 ? idx === project.codeLink.length - 1 ? project.codeLink.length > 2 ? ', and ' : ' and ' : project.codeLink.length > 2 ? ', ' : ' ' : '' }
                                 <a href={link} target='_blank' rel='noopener noreferrer'>here</a>
                             </span>
                         ) :
-                        <a href={project.siteLink} target='_blank' rel='noopener noreferrer'>here</a>
+                        <a href={project.codeLink} target='_blank' rel='noopener noreferrer'>here</a>
                     }
                 </p>
             }

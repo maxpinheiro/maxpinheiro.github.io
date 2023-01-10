@@ -52,10 +52,11 @@ export const themes: Theme[] = [
         textClass: "text-black ",
         baseColor: "bg-light-gray",
         backgrounds: {
-            about: "bg-primary-blue",
+            //about: "bg-primary-blue",
+            about: "bg-primary-yellow",
             projects: "bg-light-gray",
-            portfolio: "bg-primary-red",
-            contact: "bg-primary-yellow",
+            portfolio: "bg-primary-blue",
+            contact: "bg-primary-red",
             hexPalette: {
                 primary: "#b4b4b4", // grey
                 secondary: "#EB5656", // red

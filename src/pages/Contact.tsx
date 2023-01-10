@@ -25,9 +25,10 @@ const Contact: React.FC = () => {
     const textClass = useSelector(getTextTheme);
 
     return (
-        <div className={`row-center align-center full-page ${backgroundClass} ${textClass}`} id="contact">
-            <div className={`column-centered ${baseColor} rounded-md py-2 px-5`} >
-                <p className={`text-center text-header border-bottom border-${textClass.split('text-')[1]} px-3 my-3`}>contact</p>
+        <div className={`column-centered align-center full-page ${backgroundClass} ${textClass}`} id="contact">
+            <p className={`text-center text-header border-bottom border-${textClass.split('text-')[1]} px-3 my-3`}>contact</p>
+            <p className="text-center mx-3">Whether it's a question, comment, concern, project idea, business inquiry, trivia question, or anything else, I'd love to chat!</p>
+            <div className={`column-centered ${baseColor} rounded-md py-2 px-5 mt-5`} >
                     <div className="d-flex column-centered justify-center">
                         <div>
                             {

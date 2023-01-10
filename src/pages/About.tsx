@@ -17,17 +17,17 @@ const About: React.FC = () => {
 
     const Skills = () => (
         <>
-        <div className="row-center align-center border-bottom border-white px-3">
+        <div className={`row-center align-center border-bottom border-${textClass.split('text-')[1]} px-3`}>
             {/*<p className="text-center text-medium my-3">my skills</p>*/}
             <p className="text-center text-medium my-3">technical skills</p>
         </div>
-        <div className="row wrap my-4">
+        <div className="row wrap my-4 lg-px-6 lg-mx-6 border-box">
             {
                 skills.map(({title, entries}, idx) => (
                     <div className="col-12 col-lg-3" key={idx}>
                         <div className="mx-3">
                             <p className="text-center text-title py-1 bg-secondary-50">{title}</p>
-                            <p className="text-about mx-1">{entries}</p>
+                            <p className="text-about text-center line-height-150 mx-1">{entries}</p>
                         </div>
                     </div>
                 ))
